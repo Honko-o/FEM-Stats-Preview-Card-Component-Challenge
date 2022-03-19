@@ -1,0 +1,195 @@
+/*
+    Prefixer Mixin
+    Mixin to add Vendor Prefixes to CSS Properties
+*/
+/*
+    Overlay Mixin
+    Mixin To add Basic Overlay properties
+*/
+/* 
+    Flexbox Mixin
+    Mixin To Apply Flexbox Properties
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #090b1a;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.stats-card {
+  background-color: #1b1938;
+  margin: 20px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 991px) {
+  .stats-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.stats-card .image-mobile {
+  position: relative;
+}
+.stats-card .image-mobile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(170, 92, 219, 0.5);
+  filter: grayscale(0.1);
+  border-radius: 8px 8px 0 0;
+}
+.stats-card .image-mobile img {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+@media (min-width: 991px) {
+  .stats-card .image-mobile {
+    display: none;
+  }
+}
+.stats-card .card-info {
+  padding: 20px 45px;
+  color: rgba(255, 255, 255, 0.75);
+}
+@media (min-width: 991px) {
+  .stats-card .card-info {
+    text-align: left;
+    flex: 1;
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.stats-card .card-title {
+  color: white;
+  font-size: 1.7rem;
+}
+@media (min-width: 991px) {
+  .stats-card .card-title {
+    margin: 0;
+    font-size: 2.3rem;
+  }
+}
+.stats-card .card-title span {
+  color: #aa5cdb;
+}
+.stats-card .card-description {
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+}
+@media (min-width: 991px) {
+  .stats-card .card-description {
+    font-size: 1.1rem;
+  }
+}
+.stats-card ul.card-stats {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 20px;
+}
+@media (min-width: 991px) {
+  .stats-card ul.card-stats {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+  }
+}
+@media (min-width: 991px) {
+  .stats-card ul.card-stats li {
+    text-align: left;
+  }
+}
+.stats-card ul.card-stats :not(li:last-of-type) {
+  margin-bottom: 25px;
+}
+@media (min-width: 991px) {
+  .stats-card ul.card-stats :not(li:last-of-type) {
+    margin-bottom: 0;
+  }
+}
+.stats-card ul.card-stats h2.stats-heading {
+  font-weight: bold;
+  color: white;
+  margin: 0 5px;
+}
+.stats-card ul.card-stats p.stats-name {
+  margin: 5px 5px 0;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.stats-card .image-desktop {
+  position: relative;
+  display: none;
+}
+.stats-card .image-desktop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(170, 92, 219, 0.5);
+  filter: grayscale(0.1);
+  border-radius: 0 8px 8px 0;
+}
+.stats-card .image-desktop img {
+  max-width: 100%;
+  display: block;
+  border-radius: 0 8px 8px 0;
+}
+@media (min-width: 991px) {
+  .stats-card .image-desktop {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

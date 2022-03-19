@@ -1,0 +1,116 @@
+@use '../core/' as *;
+
+.stats-card {
+    background-color: $card-background;
+    margin: 20px;
+    border-radius: 8px;
+    text-align: center;
+    @include flex(center, center, column);
+    @media (min-width: 991px) {
+        @include flex(space-between, center, row);
+    }
+    .image-mobile {
+        position: relative;
+        &::before {
+            content: '';
+            @include overlay;            
+            background-color:  transparentize($accent, 0.5);
+            filter: grayscale(0.1);
+            border-radius: 8px 8px 0 0;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+        @media (min-width: 991px) {
+            display: none;
+        }
+    }
+    .card-info {
+        padding: 20px 45px;
+        color: $main-paragraph;
+        @media (min-width: 991px) {
+            text-align: left;
+            flex: 1;
+            width: 50%;
+            padding: {
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .card-title {
+        color: $main-heading;
+        font-size: 1.7rem;
+        @media (min-width: 991px) {
+            margin: 0;
+            font-size: 2.3rem;
+        }
+        span {
+            color: $accent;
+        }
+    }
+    .card-description {
+        line-height: 1.8;
+        color: $stats-heading;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        @media (min-width: 991px) {
+            font-size: 1.1rem;
+        }
+    }
+    ul.card-stats {
+        @include flex(null, center, column);
+        @media (min-width: 991px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;;
+        }
+        margin-top: 20px;
+        li {
+            @media (min-width: 991px) {
+                text-align: left;
+            }
+        }
+        & :not(li:last-of-type) {
+            margin-bottom: 25px;
+            @media (min-width: 991px) {
+                margin-bottom: 0;
+            }
+        }
+        h2.stats-heading {
+            font-weight: bold;
+            color: $main-heading;
+            margin: 0 5px;
+        }
+        p.stats-name {
+            margin: 5px 5px 0;
+            color: $stats-heading;
+            text-transform: uppercase;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+    }
+    .image-desktop {
+        position: relative;
+        &::before {
+            content: '';
+            @include overlay;            
+            background-color:  transparentize($accent, 0.5);
+            filter: grayscale(0.1);
+                border-radius: 0 8px 8px 0;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+                border-radius: 0 8px 8px 0;
+        }
+        display: none;
+        @media (min-width: 991px) {
+            display: block;
+        }
+    }
+}

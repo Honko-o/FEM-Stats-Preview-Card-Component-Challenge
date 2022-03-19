@@ -1,0 +1,12 @@
+@use './variables' as *;
+
+html {
+    font-size: $root-font-size;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+//   font-family: 'Inter', sans-serif; => Weights: 400, 700
+//   font-family: 'Lexend Deca', sans-serif; => Weights: 400
