@@ -10,8 +10,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: (https://github.com/Honko-o/FEM-Stats-Preview-Card-Component-Challenge)
+- Solution URL: (https://github.com/Honko-o/FEM-Stats-Preview-Card-Component-Challenge)
+- Live Site URL: (https://honko-o.github.io/FEM-Stats-Preview-Card-Component-Challenge/)
 
 ### Built with
 

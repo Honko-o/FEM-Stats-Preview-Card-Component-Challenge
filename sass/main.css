@@ -45,6 +45,7 @@ body {
 }
 
 .stats-card {
+  max-width: 600px;
   background-color: #1b1938;
   margin: 20px;
   border-radius: 8px;
@@ -62,6 +63,7 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    max-width: 1000px;
   }
 }
 .stats-card .image-mobile {

@@ -1,6 +1,7 @@
 @use '../core/' as *;
 
 .stats-card {
+    max-width: 600px;
     background-color: $card-background;
     margin: 20px;
     border-radius: 8px;
@@ -8,6 +9,7 @@
     @include flex(center, center, column);
     @media (min-width: 991px) {
         @include flex(space-between, center, row);
+        max-width: 1000px;
     }
     .image-mobile {
         position: relative;
